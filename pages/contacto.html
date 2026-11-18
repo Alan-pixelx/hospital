@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagenes/hospital.png">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <h2 style="text-align: center; color: rgb(163, 44, 44);">HOSPITAL PUBLICO DE ECUADOR</h2>
+    </header>
+    <hr>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="">Galeria</a>
+        <a href="">Acerca</a>
+        <a href="">Contacto</a>
+    </nav>
+    <hr>
+    <!--Formulario de registro-->
+    <form action="#">
+        <label for="nombre">Ingrese sus Nombres</label>
+        <br>
+        <input type="text" id="nombre" placeholder="nombre" size="10" required>
+        <br><br>
+        <label for="apellido">Ingrese sus Apellidos</label>
+        <br>
+        <input type="text" id="apellido" placeholder="apellido" size="10" required>
+        <br><br>
+        <label for="cedula">Ingrese su cedula</label>
+        <br>
+        <input type="text" id="cedula" placeholder="cedula" size="10" required>
+        <br><br>
+        <label for="telefono">Telefono</label>
+        <br>
+        <input type="number" id="telefono" required>
+        <br><br>
+        <label for="#">Genero</label>
+        <br>
+        <label for="masculino">
+            <input type="radio" id="masculino" name="genero">Masculino
+        </label>
+        <label for="femenino">
+            <input type="radio" id="femenino" name="genero">Femenino
+        </label>
+        <br><br>
+        <label for="ciudad">Seleccione su ciudad</label>
+        <select name="ciudad" id="ciudad">
+            <option value="opcion" disabled selected>Seleccionar opcion</option>
+            <option value="quito">Quito</option>
+            <option value="cuenca">Cuenca</option>
+            <option value="loja">Loja</option>
+            <option value="riobamba">Riobamba</option>
+        </select>
+        <br><br>
+        <label for="comentarios">Deje su comentario</label>
+        <br>
+        <textarea name="comentarios" id="comentarios" cols="50" rows="10" placeholder="Deje su comentario"></textarea>
+        <br>
+        <!--Botones
+        button = boton simple, sin una funcionalidad
+        submit = boton que envia datos(DB)
+        reset = limpiar el formulario
+        -->
+        <button>Enviar respuesta</button>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <br><br>
+        <button type="reset">Limpiar</button>
+    </form>
+</body>
+</html>
