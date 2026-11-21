@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagenes/hospital.png">
+    <title>Historia Clínica</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: rgb(163, 44, 44);">HOSPITAL PÚBLICO DE ECUADOR</h1>
+    </header>
+    <hr>
+    <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="/pages/servicios.html">Servicios</a>
+        <a href="">Historial Clinica</a>
+        <a href="/pages/contacto.html">Contacto</a>
+    </nav>
+    <hr>
+    <!--Formulario de historia clínica-->
+    <h2 style="text-align: center; color:darkgreen">REGISTRO DE HISTORIA CLÍNICA</h2>
+    <p style="font-size: 20px;">1. Por favor, complete los siguientes campos:</p>
+    <form action="#">
+        <label for="nombre">Ingrese nombre completo del paciente</label>
+        <br>
+        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" size="30" required>
+        <br><br>
+        <label for="cedula">Numero de cédula</label>
+        <br>
+        <input type="text" id="cedula" placeholder="Ej. 1234567890" size="15" required>
+        <br><br>
+        <label for="email">Ingrese su email de contacto</label>
+        <br>
+        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+        <br><br>
+        <label for="direccion">Dirección del domicilio</label>
+        <br>
+        <input type="text" id="direccion" placeholder="Ej. Av. Amazonas y Roca" required>
+        <br><br>
+        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <br>
+        <input type="date" id="fecha_nacimiento" required>
+        <br><br>
+        <label for="edad">Edad del paciente</label>
+        <br>
+        <input type="number" id="edad" placeholder="edad" min="0" max="150" required>
+        <br><br>
+        <label for="peso">Peso aproximado (kg)</label>
+        <br>
+        <input type="number" id="peso" placeholder="peso" required>
+        <br><br>
+        <label for="#">Genero</label>
+        <br>
+        <label for="masculino">
+            <input type="radio" id="masculino" name="genero">Masculino
+        </label>
+        <label for="femenino">
+            <input type="radio" id="femenino" name="genero">Femenino
+        </label>
+        <label for="otro">
+            <input type="radio" id="otro" name="genero" value="otro">Otro
+        </label>
+        <br><br>
+        <label for="especialidad">Seleccione la especialidad médica</label>
+        <br>
+        <select name="especialidad" id="especialidad">
+            <option value="opcion" disabled selected>Seleccionar especialidad</option>
+            <option value="medicina_general">Medicina General</option>
+            <option value="pediatria">Pediatría</option>
+            <option value="ginecologia">Ginecología</option>
+            <option value="cardiologia">Cardiología</option>
+            <option value="neurologia">Neurología</option>
+            <option value="dermatologia">Dermatología</option>
+            <option value="otorrinolaringologia">Otorrinolaringología</option>
+            <option value="urologia">Urología</option>
+        </select>
+        <br><br>
+        <label for="tipo_sangre">Seleccione su tipo de sangre</label>
+        <br>
+        <select name="tipo_sangre" id="tipo_sangre">
+            <option value="opcion" disabled selected>Seleccionar tipo de sangre</option>
+            <option value="a_positivo">A+</option>
+            <option value="a_negativo">A-</option>
+            <option value="b_positivo">B+</option>
+            <option value="b_negativo">B-</option>
+            <option value="ab_positivo">AB+</option>
+            <option value="ab_negativo">AB-</option>
+            <option value="o_positivo">O+</option>
+            <option value="o_negativo">O-</option>
+        </select>
+        <br><br>
+        <label for="examenes">Adjunte examenes previos</label>        
+        <br>
+        <input type="file" id="examenes">
+        <br><br>
+        <label for="motivo">Motivo de la consulta</label>        
+        <br>
+        <textarea name="motivo" id="motivo" cols="50" rows="10" placeholder="Ingrese el motivo de la consulta"></textarea>
+        <br><br>
+        <!--Nuevo-->
+        <label for="telefono_emergencia">Teléfono de emergencia</label>
+        <br>
+        <input type="tel" id="telefono_emergencia" name="telefono_emergencia" placeholder="ej. 0991234567" required>
+        <br><br>
+        <!--Nuevo-->
+        <label>Antecedentes médicos</label>
+        <br>
+        <label for="alergias">
+            <input type="checkbox" id="alergias" name="antecedentes" value="alergias">Alergias
+        </label>
+        <br>
+        <label for="diabetes">
+            <input type="checkbox" id="diabetes" name="antecedentes" value="diabetes">Diabetes
+        </label>
+        <br>
+        <label for="hipertension">
+            <input type="checkbox" id="hipertension" name="antecedentes" value="hipertension">Hipertensión
+        </label>
+        <br>
+        <label for="ninguno">
+            <input type="checkbox" id="ninguno" name="antecedentes" value="ninguno">Ninguno
+        </label>
+        <br><br>
+        <label for="hora_cita">Hora preferida de atención</label>
+        <br>
+        <input type="time" id="hora_cita" name="hora_cita" required>
+        <br><br>
+        <!--Botones
+        button = boton simple, sin una funcionalidad
+        submit = boton que envia datos(DB)
+        reset = limpiar el formulario
+        -->
+        <input type="submit" value="Guardar Historia Clínica">
+        <br><br>
+        <button type="reset">Limpiar</button>
+        <br><br>
+    </form>
+</body>
+</html>
